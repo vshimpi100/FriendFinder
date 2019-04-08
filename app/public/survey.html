@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Friend Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/dist/semantic.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="styles/dist/semantic.min.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="ui center aligned grid container" style="margin:40px">
+        <div class="row">
+          <div class="twelve wide column">
+            <h1>Friend Finder</h1>
+            <h2>Answer the survey below to get your friend match!</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="survey">
+      <div class="ui form container">
+        <div class="inline fields ui grid ">
+          <label class="four wide column">Your Name</label>
+          <input
+            class="ui eleven wide column"
+            type="text"
+            placeholder="Your Name"
+            name="name"
+          />
+        </div>
+        <div class="inline fields ui grid ">
+          <label class="four wide column">Link to Picture</label>
+          <input
+            class="ui eleven wide column"
+            type="text"
+            placeholder="https://..."
+            name="photo"
+          />
+        </div>
+        <div class="inline field ui grid ">
+          <label class="eleven wide column"
+            >On a scale of 1-5, how do you feel?</label
+          >
+          <div class="ui selection dropdown four wide column">
+            <input type="hidden" name="q1" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Number</div>
+            <div class="menu">
+              <div class="item" data-value="1">1</div>
+              <div class="item" data-value="2">2</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+            </div>
+          </div>
+        </div>
+        <div class="inline field ui grid">
+          <label class="eleven wide column"
+            >And how do you feel about that first question?</label
+          >
+          <div class="ui selection dropdown four wide column">
+            <input type="hidden" name="q2" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Number</div>
+            <div class="menu">
+              <div class="item" data-value="1">1</div>
+              <div class="item" data-value="2">2</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+            </div>
+          </div>
+        </div>
+        <div class="inline field ui grid">
+          <label class="eleven wide column"
+            >Wow you are not doing well at this survey.</label
+          >
+          <div class="ui selection dropdown four wide column">
+            <input type="hidden" name="q3" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Number</div>
+            <div class="menu">
+              <div class="item" data-value="1">1</div>
+              <div class="item" data-value="2">2</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+            </div>
+          </div>
+        </div>
+        <div class="inline field ui grid">
+          <label class="eleven wide column"
+            >How do you feel about jalapenos?</label
+          >
+          <div class="ui selection dropdown four wide column">
+            <input type="hidden" name="q4" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Number</div>
+            <div class="menu">
+              <div class="item" data-value="1">1</div>
+              <div class="item" data-value="2">2</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+            </div>
+          </div>
+        </div>
+        <div class="inline field ui grid">
+          <label class="eleven wide column">How do you feel about puns?</label>
+          <div class="ui selection dropdown four wide column">
+            <input type="hidden" name="q5" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Number</div>
+            <div class="menu">
+              <div class="item" data-value="1">1</div>
+              <div class="item" data-value="2">2</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+            </div>
+          </div>
+        </div>
+        <div class="inline field ui grid">
+          <label class="eleven wide column"
+            >How do you feel about people getting jalapeno business?</label
+          >
+          <div class="ui selection dropdown four wide column">
+            <input type="hidden" name="q6" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Number</div>
+            <div class="menu">
+              <div class="item" data-value="1">1</div>
+              <div class="item" data-value="2">2</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+            </div>
+          </div>
+        </div>
+        <div class="inline field ui grid">
+          <label class="eleven wide column">How do you feel now?</label>
+          <div class="ui selection dropdown four wide column">
+            <input type="hidden" name="q7" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Number</div>
+            <div class="menu">
+              <div class="item" data-value="1">1</div>
+              <div class="item" data-value="2">2</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+            </div>
+          </div>
+        </div>
+        <div class="inline field ui grid">
+          <label class="eleven wide column"
+            >On a scale of 1-10, how do you like this survey?</label
+          >
+          <div class="ui selection dropdown four wide column">
+            <input type="hidden" name="q8" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Number</div>
+            <div class="menu">
+              <div class="item" data-value="1">1</div>
+              <div class="item" data-value="2">2</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+            </div>
+          </div>
+        </div>
+        <div class="inline field ui grid">
+          <label class="eleven wide column"
+            >How do you feel about the last question only offering 1-5 as
+            options?</label
+          >
+          <div class="ui selection dropdown four wide column">
+            <input type="hidden" name="q9" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Number</div>
+            <div class="menu">
+              <div class="item" data-value="1">1</div>
+              <div class="item" data-value="2">2</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+            </div>
+          </div>
+        </div>
+        <div class="inline field ui grid">
+          <label class="eleven wide column"
+            >How do you feel now that this survey is over?</label
+          >
+          <div class="ui selection dropdown four wide column">
+            <input type="hidden" name="q10" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Number</div>
+            <div class="menu">
+              <div class="item" data-value="1">1</div>
+              <div class="item" data-value="2">2</div>
+              <div class="item" data-value="3">3</div>
+              <div class="item" data-value="4">4</div>
+              <div class="item" data-value="5">5</div>
+            </div>
+          </div>
+        </div>
+        <div class="ui grid centered">
+          <button
+            class="ui animated fade button primary"
+            id="submit"
+            tabindex="0"
+            style="margin-bottom:40px;"
+          >
+            <div class="visible content">Click me when you're done</div>
+            <div class="hidden content">
+              Finished already?
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="ui modal" id="modal">
+        <i class="close icon"></i>
+        <div class="header">
+          Your match
+        </div>
+        <div class="image content">
+          <div class="ui medium image">
+            <img src="" id="friendImage" />
+          </div>
+          <div class="description">
+            <div class="ui header">
+              We found your new best friend.
+            </div>
+            <p>
+              Based on our calculations, your new best friend is
+              <span id="#friendName"></span>
+            </p>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="ui negative deny button">
+            Gross!
+          </div>
+          <div class="ui positive button">
+            Great!
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      $(".ui.dropdown").dropdown();
+    </script>
+    <script>
+      function getFriend(user) {
+        $.get("/api/friends", function(friends) {
+          let bffl = {};
+          let bfflScore = 1000;
+        //   console.log(friends);
+          friends.forEach(friend => {
+            let totalDifference = 0;
+            if(friend['scores[]'].length=10){
+                // console.log('true route hit')
+                for (let i = 0; i < 10; i++) {
+                    if((friend['scores[]'][i]) && (user['scores'][i])){
+                        let difference = Math.abs(parseInt(friend['scores[]'][i]) - parseInt(user['scores'][i]));
+                        // console.log(difference);
+                        totalDifference += difference;
+                    }
+                }
+                // console.log('comparing '+totalDifference);
+                if (totalDifference < bfflScore) {
+                    console.log('bffl assigned to '+friend.name);
+                    bfflScore = totalDifference;
+                    bffl = friend;
+                }
+            }
+          });
+        //   console.log(bffl);
+            $("#friendImage").attr("src",bffl.photo);
+            $("#friendName").text(bffl.name);
+            $("#modal").modal("show");
+        });
+      }
+      $(document).ready(function(){
+        $("#submit").on("click", async function() {
+            let name = $("input[name='name']").val();
+            let photo = $("input[name='photo']").val();
+            let scores = [];
+            for (let i = 1; i <= 10; i++) {
+            let select = "input[name='q" + i + "']";
+            scores.push($(select).attr("value"));
+            }
+            let user = {
+            name: name,
+            photo: photo,
+            scores: scores
+            };
+            // console.log(user);
+            $.post("/api/friends", user);
+            getFriend(user);
+        });
+      })
+    </script>
+  </body>
+</html>
