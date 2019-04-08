@@ -275,7 +275,7 @@
         //   console.log(friends);
           friends.forEach(friend => {
             let totalDifference = 0;
-            if(friend['scores[]'].length=10){
+            if(friend['scores[]'].length=10 && friend.name!=user.name){
                 // console.log('true route hit')
                 for (let i = 0; i < 10; i++) {
                     if((friend['scores[]'][i]) && (user['scores'][i])){
